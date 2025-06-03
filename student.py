@@ -4,7 +4,7 @@ import numpy as np
 from pathlib import Path
 import pickle
 
-model_path = Path("models/student_pass_predictor.pkl")
+model_path = Path("student_pass_predictor.pkl")
 
 if model_path.exists():
     with open(model_path, "rb") as f:
