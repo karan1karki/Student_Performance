@@ -1,18 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pathlib import Path
 import pickle
 
-model_path = Path("student_pass_predictor.pkl")
-
-if model_path.exists():
-    with open(model_path, "rb") as f:
-        model = pickle.load(f)
-else:
-    st.error("❌ Model file not found. Make sure 'student_pass_predictor.pkl' is in the 'models' folder.")
-
-
+with open("student_pass_prediction.pkl","rb") as model_file:
+    model = pickle.load(model_file)
 # Title
 st.title("🎓 Student Performance Predictor")
 st.write("Enter student information to predict if they will pass or fail.")
