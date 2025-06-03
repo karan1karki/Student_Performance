@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
-with open("student_pass_prediction.pkl","rb") as model_file:
+with open("student_pass_predictor.pkl","rb") as model_file:
     model = pickle.load(model_file)
 # Title
 st.title("🎓 Student Performance Predictor")
